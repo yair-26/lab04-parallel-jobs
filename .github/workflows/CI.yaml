@@ -16,6 +16,6 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: download dependencies
-        run: npm Ci
+        run: npm ci
       - name: run linter
         run: npm run lint   
