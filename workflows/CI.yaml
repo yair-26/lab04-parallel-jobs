@@ -1,0 +1,21 @@
+name: CI  
+on: [push, pull_request]
+jobs:
+  test:
+     runs-on: ubuntu-latest
+     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: download dependencies
+        run: npm CI
+      - name: run tests
+        run: npm test
+  lint:
+     runs-on: ubuntu-latest
+     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: download dependencies
+        run: npm Ci
+      - name: run linter
+        run: npm run lint   
